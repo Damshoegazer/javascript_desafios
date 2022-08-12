@@ -20,3 +20,5 @@ for (let i=0; i<cantidad; i++) {
 
     console.log(nombre_usuario);
 }
+
+/* comprobando el funcionamiento de github */
