@@ -1,24 +1,51 @@
 
 
-/* 1)Pide al usuario que ingrese su nombre y luego mostrar su nombre tres veces. */
 
-let nombre_usuario = prompt("Ingrese su nombre y será repetido");
+/* SELECCIONAR COMIDAS DE UNA LISTA Y CALCULAR EL COSTO TOTAL */
 
-for (let i=0; i<3; i++) {
 
-    console.log(nombre_usuario);
+let producto = "";
+let total = 0;
+
+
+function comprar() {
+    
+    while(producto != 6) {
+        producto = prompt("¿Qué queres comer hoy? Ingresá el número de tu elección.\n 1.Pizza $720\n 2.Pastas $550\n 3. Hamburguesa $840\n 4. Empnadas $630\n 5. Mariscos $1100\n 6. Finalizar");
+        
+        switch (producto) {
+            case '1':
+                total += 720;
+                alert("valor de la compra: " +total);
+                break;
+
+            case '2':
+                total += 550;
+                alert("valor de la compra: " +total);
+                break;
+
+            case '3':
+                total += 840;
+                alert("valor de la compra: " +total);
+                break; 
+            
+            case '4':
+                total += 840;
+                alert("valor de la compra: " +total);
+                break;
+
+            case '5':
+                total += 840;
+                alert("valor de la compra: " +total);
+                break;    
+            
+            case '6':
+                alert("Gracias por tu compra\n Valor total de la compra: $" + total);
+                break;
+
+
+        }   
+    }
 }
 
-
-/* 2)Modifique el programa anterior para que le pida al usuario que ingrese su nombre y una cantidad(numero), luego mostrar su nombre esa cantidad de veces */
-
-nombre_usuario = prompt("Ingrese su nombre y será repetido");
-
-let cantidad = parseInt(prompt("Ingrese un numero"));
-
-for (let i=0; i<cantidad; i++) {
-
-    console.log(nombre_usuario);
-}
-
-/* comprobando el funcionamiento de github */
+comprar();
