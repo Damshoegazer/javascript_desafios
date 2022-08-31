@@ -1,49 +1,66 @@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --------------------------------  PRIMER ENTREGA PROYECTO FINAL ------------------------------------ */
 
 
 /* creo una clase con objetos, para cargar los productos */
 
 
-class Comidas{
+/* class Comidas{
     constructor(nombre, porciones, precio){
         this.nombre = nombre;
         this.porcion = porciones;
         this.precio = precio;
     }
     
-}
+} */
 
 /* inicializo arrays para las categorias de los productos */
 
-const pizza = [];
+/* const pizza = [];
 const pasta = [];
 const hamburguesa = [];
 const empanadas = [];
-const mariscos = [];
+const mariscos = []; */
 
 /* genero nuevas instancias para cargar los productos */
 
-pizza.push(new Comidas("Pizza", 8, 720));
+/* pizza.push(new Comidas("Pizza", 8, 720));
 pasta.push(new Comidas("Pasta", 1, 550));
 hamburguesa.push(new Comidas("Hamburguesa", 1, 840));
 empanadas.push(new Comidas("Empanadas", 1, 630));
-mariscos.push(new Comidas("Mariscos", 1, 1100));
+mariscos.push(new Comidas("Mariscos", 1, 1100)); */
 
 
 /* muestro los productos por consola */
 
-console.log(pizza);
+/* console.log(pizza);
 console.log(pasta);
 console.log(hamburguesa);
 console.log(empanadas);
-console.log(mariscos);
+console.log(mariscos); */
 
 
 /* muestro el incremento del precio por packaging plastico  con un FOREACH*/
 
-let packaging = 200;
+/* let packaging = 200;
 
 let total_con_packaging = 0;
 
@@ -55,20 +72,20 @@ total_con_packaging.forEach( function(num){
 
 })
 
-}
+} */
 
-comidas_precios_packaging();
+/* comidas_precios_packaging();
 
 console.log("_____________________________________________");
 
 let total = 0;
 let ingresar_comida = "";
-let carrito1 = [];
+let carrito1 = []; */
 
 
 /* le muestro a los compradores los productos para escoger*/
 
-function cuenta(){
+/* function cuenta(){
 
 while(ingresar_comida != 6) {
     ingresar_comida = prompt("1. Pizza $720\n, 2. Pasta $550\n, 3. Hamburguesa $840\n, 4. Empanadas $630\n, 5. Mariscos $1100\n, 6. FINALIZAR");
@@ -107,13 +124,13 @@ while(ingresar_comida != 6) {
     }
 }
 
-}
+} */
 
 /* muestro el total de la compra y el carrito con sus productos */
 
-cuenta();
+/* cuenta();
 console.log("_________________________________________________________________");
-console.log("TU CARRITO:", carrito1);
+console.log("TU CARRITO:", carrito1); */
 
 
 
