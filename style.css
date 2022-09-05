@@ -9,7 +9,16 @@
     
 }
 
-@font-face {
+.estilo_productos {
+    border: 1px solid;
+}
+
+.estilo_carrito {
+    border: 1px solid;
+}
+
+
+/* @font-face {
     font-family: BebasNeue-Regular;
     src: url(./fonts/BebasNeue-Regular.ttf);
 }
@@ -256,4 +265,4 @@ nav {
 .tarj5 .btn_5 h4{
     font-size: 16px;
     font-family: IBMPlexMono-Regular;
-}
+} */
