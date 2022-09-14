@@ -1,5 +1,7 @@
 
-/* ____________________________________ SEGUNDA ENTREGA DEL PROYECTO FINAL ____________________________________ */
+/* ____________________________________ desafíos: Operadores avanzados y librerías ____________________________________ */
+
+
 
 
 
@@ -12,7 +14,25 @@ let productos = [
     {id:4, nombre:"hamburguesa", precio: 550, img:src="./assets/hamburguesas_1.jpg"},
     {id:5, nombre:"mariscos", precio: 700, img:src="./assets/masriscos_1.jpg"}
 ];
+
+
 let carrito = [];
+
+/* hago un Spread de objetos y los muestro por consola */
+
+const cantidad = {
+    porciones: "individuales",
+    tipo: "delivery"
+}
+
+
+const comidas = {
+    ...productos,
+    ...cantidad
+    
+};
+
+console.log(comidas);
 
 
 /* agrego los productos a la lista*/
@@ -68,6 +88,20 @@ function ingresar_carrito(id){
     localStorage.setItem("carrito" , arreglo_JSON);
     const encontrar_productos = productos.find((it) => it.id == id);
     carrito.push(encontrar_productos);
+
+    /* le agrego un alert que le comunica al usuario que ha seleccionado un producto */
+
+    Toastify({
+        text: "Producto ingresado",
+        duration: 800,
+        style: {
+            background: "#BDFF00",
+            color: "black",
+            fontFamily: "roboto"
+        }
+        
+        }).showToast();
+
     render_carrito();
 }
 
@@ -76,58 +110,22 @@ function ingresar_carrito(id){
 
 function borrar_carrito(id){
     carrito.splice(id, 1);
+
+    /* agrego una alerta que le confirma al usuario la eliminacion de un producto del carrito */
+    Swal.fire({
+        title: "ELIMINADO",
+        text: "Acabas de eliminar un producto del carrito",
+        icon: "success",
+        confirmButtonColor: "#BDFF00",
+        
+    });
+
     render_carrito();
 }
 
 render_productos();
 
 console.log(carrito);
-
-
-
-
-
-
-
-/* ____________________________________________ Interactuar con HTML _______________________________________ */
-
-
-
-/* let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let btn4 = document.getElementById("btn4");
-let btn5 = document.getElementById("btn5");
-
-btn1.addEventListener("click" , function() {
-    
-    console.log("seleccionaste Pastas");
-})
-
-btn2.addEventListener("click" , function() {
-    
-    console.log("seleccionaste Empanadas");
-})
-btn3.addEventListener("click" , function() {
-    
-    console.log("seleccionaste Mariscos");
-})
-btn4.addEventListener("click" , function() {
-    
-    console.log("seleccionaste Hamburguesas");
-})
-btn5.addEventListener("click" , function() {
-    
-    console.log("seleccionaste Pizza");
-})
- */
-
-
-
-
-
-
-
 
 
 
