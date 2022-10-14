@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: BebasNeue-Regular;
+    src: url(./fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: IBMPlexMono-Regular;
+    src: url(./fonts/IBMPlexMono-Regular.ttf);
+}
+@font-face {
+    font-family: IBMPlexMono-SemiBold;
+    src: url(./fonts/IBMPlexMono-SemiBold.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/fondo_.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background-color: #FFCD4B;
+    opacity: 70%;
+
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 200px;
+}
+
+.container_class {
+    width: 85%;
+}
+.container_class .clima_ {
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: IBMPlexMono-Regular;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin-top: 20px;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 50px;
+    font-family: BebasNeue-Regular;
+}
+.titulo_principal {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #000000;
+    text-align: center;
+}
+.titulo_principal h2 {
+    font-size: 40px;
+    font-family: BebasNeue-Regular;
+    color: aliceblue;
+}
+
+#carrito_btn {
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    background-color: #BDFF00;
+    border-radius: 5%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#carrito_btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 0, 0);;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.producto {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    font-family: BebasNeue-Regular;
+    font-size: 25px;
+    width: 250px;
+    height: 480px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: 10px;
+}
+.producto :hover{
+    background-color: rgb(76, 76, 76);
+}
+.producto img {
+    width: 300px;
+}
+#productos_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.cantainer_card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.precio_prod {
+    font-family: IBMPlexMono-Regular;
+    font-size: 18px;
+}
+.boton_agregar {
+    background-color: #BDFF00;
+    color: rgb(0, 0, 0);
+    width: 85%;
+    font-size: 16px;
+    font-family: IBMPlexMono-SemiBold;
+    padding: 5px;
+    border: none;
+}
+
+.boton_agregar:hover {
+    cursor: pointer;
+    background-color: #e4ff9a;
+}
+.boton_agregar:focus {
+    outline: none;
+}
+
+.swal2-popup {
+    font-size: 18px ;
+    font-family: IBMPlexMono-SemiBold;
+    background-color: #000000;
+    color: white;
+}
+
+
+
+/* ______________MODAL______________ */
+
+.container_modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.542);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    font-family: IBMPlexMono-SemiBold;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrito_modal {
+    position: relative;
+    background-color: #FFCD4B;
+    width: 35%;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+    color: rgb(0, 0, 0);
+    opacity: 80%;
+}
+
+.modal-active .carrito_modal {
+    margin-top: 0;
+}
+
+.carrito_modal h3 {
+    color: rgb(0, 0, 0);
+    padding-bottom: 5px;
+    font-family: BebasNeue-Regular;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+#container_carrito :hover {
+    background-color: #BDFF00;
+}
+.carrito_modal #carrito_cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border: none;
+    background-color: #FFCD4B;
+}
+.carrito_modal #carrito_cerrar:hover {
+    cursor: pointer;
+}
+.carrito_modal #carrito_cerrar:focus {
+    outline: none;
+}
+.carrito_modal .precio_p {
+    padding-top: 10px;
+    
+}
+
+.modal_btn_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_btn_div .precio_p {
+    background-color: #000000 ;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    
+}
+
+.comprar_btn {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    width: 85%;
+    font-size: 16px;
+    font-family: IBMPlexMono-SemiBold;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.prods_seleccionados {
+    border: 5px solid rgb(0, 0, 0);;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.btn_eliminar {
+    background-color: #FFCD4B;
+    color: rgb(255, 81, 0);
+    border: none;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.btn_eliminar:hover {
+    cursor: pointer;
+}
+.btn_eliminar:focus {
+    outline: none;
+}
